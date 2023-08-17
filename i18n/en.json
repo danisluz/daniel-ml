@@ -1,6 +1,8 @@
 {
   "page.home.head.title": "Daniel Luz",
   "page.home.head.meta.description": "Discover Daniel Luz, Full Stack Developer passionate about technological innovation. Skills in Angular, React, Node.js, and Spring Boot. Expert in HTML, CSS, JavaScript and API integration.",
+  "page.home.img.og": "static/img/og-image.png",
+
   "page.home.title": "Hello I am",
   "page.home.sutitle": "I am a",
   "page.home.office": "Developer",

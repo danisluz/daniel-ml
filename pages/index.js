@@ -17,6 +17,7 @@ export default function Home({ dir }) {
   const intl = useIntl();
   const title = intl.formatMessage({ id: "page.home.head.title" });
   const pdfCurriculum = intl.formatMessage({ id: "page.home.pdf" });
+  const imgOg = intl.formatMessage({ id: "page.home.img.og" });
   const description = intl.formatMessage({
     id: "page.home.head.meta.description",
   });
@@ -35,7 +36,7 @@ export default function Home({ dir }) {
         {/* Tags Open Graph para compartilhamento em redes sociais */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content='../public/static/img/og-image.png' />
+        <meta property="og:image" content={imgOg} />
         <meta property="og:url" content='https://www.danisluz.com/' />
 
         <script
