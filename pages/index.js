@@ -34,13 +34,36 @@ export default function Home({ dir }) {
         <link rel="icon" href="/favicon.ico" hrefLang="en" />
         <link rel="icon" href="/favicon.ico" hrefLang="pt" />
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-T2SQRN47');
+              `,
+          }}
+        />
       </Head>
+
+
+      <noscript><iframe 
+        src="https://www.googletagmanager.com/ns.html?id=GTM-T2SQRN47"
+        height="0" width="0" style={{ display: "none", visibility: "hidden" }}>
+      </iframe></noscript>
+
       <header>
         <div className={styles.translation}>
           {locales.map((locale) => (
             <Link key={locale} href="/" locale={locale}>
-              <div 
-                className={`${styles.languageButton} ${pathSegments === locale ? styles.selectedLanguage : styles.selectedNotLanguage}`}
+              <div
+                className={`${styles.languageButton} ${
+                  pathSegments === locale
+                    ? styles.selectedLanguage
+                    : styles.selectedNotLanguage
+                }`}
                 onClick={() => setSelectedLocale(locale)}
               >
                 <span>{locale.toUpperCase()}</span>
@@ -50,6 +73,9 @@ export default function Home({ dir }) {
         </div>
       </header>
       <Layout>
+
+
+
         <section
           id="home"
           data-nav-tooltip="Home"
@@ -60,14 +86,25 @@ export default function Home({ dir }) {
               <div className="row full-screen align-items-center">
                 <div className="col-lg-6">
                   <div className="type-box">
-
-                    <h6><FormattedMessage id="page.home.title" values={{ b: (info) => <b>{info}</b> }}/></h6>
+                    <h6>
+                      <FormattedMessage
+                        id="page.home.title"
+                        values={{ b: (info) => <b>{info}</b> }}
+                      />
+                    </h6>
                     <h1 className="font-alt">Daniel Luz</h1>
                     <p className="lead">
-                      <FormattedMessage id="page.home.sutitle" values={{ b: (info) => <b>{info}</b> }}/> <TypingAnimation />!
+                      <FormattedMessage
+                        id="page.home.sutitle"
+                        values={{ b: (info) => <b>{info}</b> }}
+                      />{" "}
+                      <TypingAnimation />!
                     </p>
                     <p className="desc">
-                      <FormattedMessage id="page.home.text" values={{ b: (info) => <b>{info}</b> }}/>
+                      <FormattedMessage
+                        id="page.home.text"
+                        values={{ b: (info) => <b>{info}</b> }}
+                      />
                     </p>
                     <div className="btn-bar">
                       <a
@@ -75,7 +112,10 @@ export default function Home({ dir }) {
                         href={pdfCurriculum}
                         target="_blank"
                       >
-                        <FormattedMessage id="page.home.button" values={{ b: (info) => <b>{info}</b> }}/>
+                        <FormattedMessage
+                          id="page.home.button"
+                          values={{ b: (info) => <b>{info}</b> }}
+                        />
                       </a>
                     </div>
                   </div>

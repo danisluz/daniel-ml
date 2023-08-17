@@ -42,19 +42,6 @@ export default function App({ Component, pageProps }) {
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
 
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-GLV7QG39X0"></script>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-
-                gtag('config', 'G-GLV7QG39X0');
-              `,
-        }}
-      />
-
       <link
         href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet"
