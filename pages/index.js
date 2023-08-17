@@ -1,24 +1,25 @@
-import React, { useState } from 'react';
-import { FormattedMessage, useIntl } from 'react-intl'
-import Link from "next/link"
-import { useRouter } from 'next/router'
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import React, { useState } from "react";
+import { FormattedMessage, useIntl } from "react-intl";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
 
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Expertise from "../components/Expertise";
 import TypingAnimation from "../components/TypingAnimation";
 import Layout from "../layout/Layout";
-import Experience from '../components/Experience';
+import Experience from "../components/Experience";
 
 export default function Home({ dir }) {
-
   const { locales } = useRouter();
   const intl = useIntl();
-  const title = intl.formatMessage({ id: "page.home.head.title"})
-  const pdfCurriculum = intl.formatMessage({ id: "page.home.pdf"})
-  const description = intl.formatMessage({ id: "page.home.head.meta.description"})
+  const title = intl.formatMessage({ id: "page.home.head.title" });
+  const pdfCurriculum = intl.formatMessage({ id: "page.home.pdf" });
+  const description = intl.formatMessage({
+    id: "page.home.head.meta.description",
+  });
   const [selectedLocale, setSelectedLocale] = useState("fr");
   const pathSegments = useRouter().locale;
 
@@ -48,11 +49,14 @@ export default function Home({ dir }) {
         />
       </Head>
 
-
-      <noscript><iframe 
-        src="https://www.googletagmanager.com/ns.html?id=GTM-T2SQRN47"
-        height="0" width="0" style={{ display: "none", visibility: "hidden" }}>
-      </iframe></noscript>
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-T2SQRN47"
+          height="0"
+          width="0"
+          style={{ display: "none", visibility: "hidden" }}
+        ></iframe>
+      </noscript>
 
       <header>
         <div className={styles.translation}>
@@ -73,9 +77,6 @@ export default function Home({ dir }) {
         </div>
       </header>
       <Layout>
-
-
-
         <section
           id="home"
           data-nav-tooltip="Home"
