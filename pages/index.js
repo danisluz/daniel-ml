@@ -30,11 +30,13 @@ export default function Home({ dir }) {
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" href="/favicon.ico" hrefLang="x-default" />
-        <link rel="icon" href="/favicon.ico" hrefLang="fr" />
-        <link rel="icon" href="/favicon.ico" hrefLang="en" />
-        <link rel="icon" href="/favicon.ico" hrefLang="pt" />
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+        {/* Tags Open Graph para compartilhamento em redes sociais */}
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={imageUrl} />
+        <meta property="og:url" content='../public/static/img/og-image.png' />
 
         <script
           dangerouslySetInnerHTML={{
