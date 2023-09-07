@@ -31,9 +31,6 @@ const About = () => {
                 </h3>
               </div>
               <div className="about-text">
-                <h3>
-                  <FormattedMessage id="page.about.aboutMe.text1" />
-                </h3>
                 <p>
                   <FormattedMessage id="page.about.aboutMe.text2" />
                 </p>
